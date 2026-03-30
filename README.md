@@ -111,12 +111,14 @@ project-folder/
 ---
 
 ## GitHub Repository
+https://github.com/Litik-Aswani/phone-finder
 
-https://github.com//phone-finder  
+---
 
+## Hosted Link
+https://litik-aswani.github.io/phone-finder/
 ---
 
 ## Author
 
-Litik Aswani 
-Middlesex University Dubai  
+Litik Aswani
