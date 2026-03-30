@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Finder — Device Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700&family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <div class="masthead-meta">
+        <span id="live-date"></span>
+        <span class="sep">—</span>
+        <span>Device Catalog</span>
+      </div>
+      <div class="masthead-issue">Vol. I</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="masthead-main">
+      <div class="masthead-eyebrow">The Definitive</div>
+      <h1>Phone<br><em>Finder</em></h1>
+      <p class="masthead-desc">Search, compare and explore specifications<br>across every major device manufacturer.</p>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="search-zone">
+      <label class="search-label" for="searchInput">— Search devices —</label>
+      <div class="search-row">
+        <div class="input-wrap">
+          <input type="text" id="searchInput" placeholder="iPhone, Samsung, Oppo…" autocomplete="off" spellcheck="false" />
+          <button id="clearBtn" class="clear-btn" aria-label="Clear">✕</button>
+        </div>
+        <button id="searchBtn">Search</button>
+        <button id="showAllBtn" class="btn-ghost">Show All</button>
+      </div>
+      <p id="message" class="message"></p>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <div id="loading" class="loading hidden">
+      <div class="loading-inner">
+        <div class="loading-track"><div class="loading-fill"></div></div>
+        <span>Fetching catalog…</span>
+      </div>
+    </div>
+
+    <section class="catalog-section">
+      <div class="section-bar">
+        <span class="section-label">Available Devices</span>
+        <span id="phoneCount" class="section-count"></span>
+      </div>
+      <div id="phoneContainer" class="phone-grid"></div>
+    </section>
+
+    <section id="detailsSection" class="details-section hidden">
+      <div class="section-bar">
+        <span class="section-label">Specification Sheet</span>
+        <button id="closeDetails" class="btn-close">Close ✕</button>
+      </div>
+      <div id="detailsContainer"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="rule"></div>
+    <div class="footer-inner">
+      <span class="footer-brand">PhoneFinder</span>
+      <span>Data via Programming Hero Open API - Litik Aswani</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("live-date").textContent = new Date().toLocaleDateString("en-GB", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+  </script>
+</body>
+</html>
